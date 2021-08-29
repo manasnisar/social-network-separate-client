@@ -196,7 +196,7 @@ class LoginPage extends React.Component {
         <Message>
           <Message.Header>
             <a
-              href="https://github.com/misa-j/social-network"
+              href="https://github.com/manasnisar/social-network-app"
               target="_blank"
               rel="noopener noreferrer"
             >
