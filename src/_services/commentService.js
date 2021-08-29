@@ -27,7 +27,7 @@ function addComment(params) {
     })
   };
 
-  return fetch("process.env.REACT_APP_SERVER_URL/api/comment/addComment/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/comment/addComment/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -46,7 +46,7 @@ function addCommentReply(params) {
     })
   };
 
-  return fetch("process.env.REACT_APP_SERVER_URL/api/comment/addCommentReply/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/comment/addCommentReply/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -63,7 +63,7 @@ function getCommentReplies(commentId, queryParams) {
     body: JSON.stringify({ commentId, ...queryParams })
   };
 
-  return fetch("process.env.REACT_APP_SERVER_URL/api/comment/getCommentReplies/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/comment/getCommentReplies/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -80,7 +80,7 @@ function getPostComments(postId, queryParams) {
     body: JSON.stringify({ postId, ...queryParams })
   };
 
-  return fetch("process.env.REACT_APP_SERVER_URL/api/comment/getComments/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/comment/getComments/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -97,7 +97,7 @@ function getCommentLikes(commentId) {
     body: JSON.stringify({ commentId })
   };
 
-  return fetch("process.env.REACT_APP_SERVER_URL/api/comment/getCommentLikes/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/comment/getCommentLikes/", requestOptions)
     .then(handleResponse)
     .then(response => {
       return response;
@@ -114,7 +114,7 @@ function getCommentReplyLikes(commentId) {
     body: JSON.stringify({ commentId })
   };
 
-  return fetch("process.env.REACT_APP_SERVER_URL/api/comment/getCommentReplyLikes/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/comment/getCommentReplyLikes/", requestOptions)
     .then(handleResponse)
     .then(response => {
       return response;
@@ -133,7 +133,7 @@ function likeComment(params) {
     body: JSON.stringify({ ...params })
   };
 
-  return fetch("process.env.REACT_APP_SERVER_URL/api/comment/likeComment/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/comment/likeComment/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -153,7 +153,7 @@ function likeCommentReply(params) {
     })
   };
 
-  return fetch("process.env.REACT_APP_SERVER_URL/api/comment/likeCommentReply/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/comment/likeCommentReply/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;

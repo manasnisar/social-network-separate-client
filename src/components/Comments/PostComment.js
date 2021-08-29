@@ -31,7 +31,7 @@ function searchUser(q) {
     body: JSON.stringify({ q })
   };
 
-  return fetch("process.env.REACT_APP_SERVER_URL/api/user/searchByUsername", requestOptions).then(res => {
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/searchByUsername", requestOptions).then(res => {
     return res;
   });
 }
