@@ -21,7 +21,7 @@ function postLikeNotification({ _id, createdAt, sender, post }) {
   return (
     <Feed.Event key={_id}>
       <Feed.Label
-        image={`/images/profile-picture/100x100/${sender[0].profilePicture}`}
+        image={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${sender[0].profilePicture}`}
       />
       <Feed.Content>
         <Feed.Summary>
@@ -36,7 +36,7 @@ function postLikeNotification({ _id, createdAt, sender, post }) {
           <Link to={`/p/${post[0]._id}`}>
             <Image
               rounded
-              src={`/images/post-images/thumbnail/${post[0].photo}`}
+              src={`${process.env.REACT_APP_SERVER_URL}/images/post-images/thumbnail/${post[0].photo}`}
             />
           </Link>
         </Feed.Extra>
@@ -49,7 +49,7 @@ function commentLikeNotification({ _id, createdAt, sender, comment, post }) {
   return (
     <Feed.Event key={_id}>
       <Feed.Label
-        image={`/images/profile-picture/100x100/${sender[0].profilePicture}`}
+        image={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${sender[0].profilePicture}`}
       />
       <Feed.Content>
         <Feed.Summary>
@@ -65,7 +65,7 @@ function commentLikeNotification({ _id, createdAt, sender, comment, post }) {
           <Link to={`/p/${post[0]._id}`}>
             <Image
               rounded
-              src={`/images/post-images/thumbnail/${post[0].photo}`}
+              src={`${process.env.REACT_APP_SERVER_URL}/images/post-images/thumbnail/${post[0].photo}`}
             />
           </Link>
         </Feed.Extra>
@@ -78,7 +78,7 @@ function likeCommentReplyNotification({ _id, createdAt, sender, reply, post }) {
   return (
     <Feed.Event key={_id}>
       <Feed.Label
-        image={`/images/profile-picture/100x100/${sender[0].profilePicture}`}
+        image={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${sender[0].profilePicture}`}
       />
       <Feed.Content>
         <Feed.Summary>
@@ -94,7 +94,7 @@ function likeCommentReplyNotification({ _id, createdAt, sender, reply, post }) {
           <Link to={`/p/${post[0]._id}`}>
             <Image
               rounded
-              src={`/images/post-images/thumbnail/${post[0].photo}`}
+              src={`${process.env.REACT_APP_SERVER_URL}/images/post-images/thumbnail/${post[0].photo}`}
             />
           </Link>
         </Feed.Extra>
@@ -107,7 +107,7 @@ function postTaggedNotification({ _id, createdAt, sender, post }) {
   return (
     <Feed.Event key={_id}>
       <Feed.Label
-        image={`/images/profile-picture/100x100/${sender[0].profilePicture}`}
+        image={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${sender[0].profilePicture}`}
       />
       <Feed.Content>
         <Feed.Summary>
@@ -122,7 +122,7 @@ function postTaggedNotification({ _id, createdAt, sender, post }) {
           <Link to={`/p/${post[0]._id}`}>
             <Image
               rounded
-              src={`/images/post-images/thumbnail/${post[0].photo}`}
+              src={`${process.env.REACT_APP_SERVER_URL}/images/post-images/thumbnail/${post[0].photo}`}
             />
           </Link>
         </Feed.Extra>
@@ -135,7 +135,7 @@ function commentTaggedNotification({ _id, createdAt, sender, post }) {
   return (
     <Feed.Event key={_id}>
       <Feed.Label
-        image={`/images/profile-picture/100x100/${sender[0].profilePicture}`}
+        image={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${sender[0].profilePicture}`}
       />
       <Feed.Content>
         <Feed.Summary>
@@ -150,7 +150,7 @@ function commentTaggedNotification({ _id, createdAt, sender, post }) {
           <Link to={`/p/${post[0]._id}`}>
             <Image
               rounded
-              src={`/images/post-images/thumbnail/${post[0].photo}`}
+              src={`${process.env.REACT_APP_SERVER_URL}/images/post-images/thumbnail/${post[0].photo}`}
             />
           </Link>
         </Feed.Extra>
@@ -163,7 +163,7 @@ function addCommentNotification({ _id, createdAt, sender, comment, post }) {
   return (
     <Feed.Event key={_id}>
       <Feed.Label
-        image={`/images/profile-picture/100x100/${sender[0].profilePicture}`}
+        image={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${sender[0].profilePicture}`}
       />
       <Feed.Content>
         <Feed.Summary>
@@ -179,7 +179,7 @@ function addCommentNotification({ _id, createdAt, sender, comment, post }) {
           <Link to={`/p/${post[0]._id}`}>
             <Image
               rounded
-              src={`/images/post-images/thumbnail/${post[0].photo}`}
+              src={`${process.env.REACT_APP_SERVER_URL}/images/post-images/thumbnail/${post[0].photo}`}
             />
           </Link>
         </Feed.Extra>
@@ -192,7 +192,7 @@ function followNotification({ _id, createdAt, sender }) {
   return (
     <Feed.Event key={_id}>
       <Feed.Label
-        image={`/images/profile-picture/100x100/${sender[0].profilePicture}`}
+        image={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${sender[0].profilePicture}`}
       />
       <Feed.Content>
         <Feed.Summary>
@@ -218,7 +218,7 @@ function commentReplyNotification({
   return (
     <Feed.Event key={_id}>
       <Feed.Label
-        image={`/images/profile-picture/100x100/${sender[0].profilePicture}`}
+        image={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${sender[0].profilePicture}`}
       />
       <Feed.Content>
         <Feed.Summary>
@@ -235,7 +235,7 @@ function commentReplyNotification({
           <Link to={`/p/${post[0]._id}`}>
             <Image
               rounded
-              src={`/images/post-images/thumbnail/${post[0].photo}`}
+              src={`${process.env.REACT_APP_SERVER_URL}/images/post-images/thumbnail/${post[0].photo}`}
             />
           </Link>
         </Feed.Extra>

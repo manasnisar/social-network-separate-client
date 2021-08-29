@@ -31,7 +31,7 @@ const linkifyOptions = {
 
 function ShowImage({ show, image }) {
   return show ? (
-    <img src={`/images/profile-picture/100x100/${image}`} alt="" />
+    <img src={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${image}`} alt="" />
   ) : (
     <div></div>
   );
@@ -93,7 +93,7 @@ const MessengerMessages = ({
                   width: "40%",
                   height: "20%",
                 }}
-                src={`/images/chat-images/${message.photo}`}
+                src={`${process.env.REACT_APP_SERVER_URL}/images/chat-images/${message.photo}`}
                 alt=""
               />
             }
@@ -162,7 +162,7 @@ const MessengerMessages = ({
                   width: "40%",
                   height: "20%",
                 }}
-                src={`/images/chat-images/${message.photo}`}
+                src={`${process.env.REACT_APP_SERVER_URL}/images/chat-images/${message.photo}`}
                 alt=""
               />
             }

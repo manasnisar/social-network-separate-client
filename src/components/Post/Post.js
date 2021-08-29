@@ -166,7 +166,7 @@ class Post extends Component {
           <div className="post-label">
             <div className="label-image">
               <img
-                src={`/images/profile-picture/100x100/${post.author[0].profilePicture}`}
+                src={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${post.author[0].profilePicture}`}
                 alt=""
               />
             </div>
@@ -246,14 +246,14 @@ class Post extends Component {
         <div className="post-image">
           {this.state.loadedImg ? null : (
             <Segment loading>
-              <Image src={`/images/post-images/thumbnail/${post.photo}`} />
+              <Image src={`${process.env.REACT_APP_SERVER_URL}/images/post-images/thumbnail/${post.photo}`} />
             </Segment>
           )}
           <img
             onClick={this.handleToggleTags}
             onLoad={() => this.setState({ loadedImg: true })}
             style={this.state.loadedImg ? {} : { display: "none" }}
-            src={`/images/post-images/${post.photo}`}
+            src={`${process.env.REACT_APP_SERVER_URL}/images/post-images/${post.photo}`}
             alt=""
           />
           {ribbon}

@@ -75,7 +75,7 @@ class ProfilePage extends Component {
           trigger={
             <div className="gallery-item">
               <img
-                src={`/images/post-images/thumbnail/${post.photo}`}
+                src={`${process.env.REACT_APP_SERVER_URL}/images/post-images/thumbnail/${post.photo}`}
                 className="gallery-image"
                 alt=""
               />
@@ -149,7 +149,7 @@ class ProfilePage extends Component {
                 <div className="profile">
                   <div className="profile-image">
                     <img
-                      src={`/images/profile-picture/100x100/${user.data.profilePicture}`}
+                      src={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${user.data.profilePicture}`}
                       alt=""
                     />
                   </div>

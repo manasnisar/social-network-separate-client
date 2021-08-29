@@ -105,7 +105,7 @@ class MessengerContent extends Component {
         ) : null}
         <div className="contact-profile">
           <img
-            src={`/images/profile-picture/100x100/${currentRoom.user.profilePicture}`}
+            src={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${currentRoom.user.profilePicture}`}
             alt=""
           />
           <p>{currentRoom.user.firstName + " " + currentRoom.user.lastName}</p>
@@ -148,7 +148,7 @@ class MessengerContent extends Component {
             {content.isTyping ? (
               <li className="sent" key={currentRoom.user._id}>
                 <img
-                  src={`/images/profile-picture/100x100/${currentRoom.user.profilePicture}`}
+                  src={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${currentRoom.user.profilePicture}`}
                   alt=""
                 />
                 <p>typing...</p>

@@ -36,7 +36,7 @@ const CommentReply = ({ username, comment, post: { postId, photo } }) => {
   return (
     <Comment>
       <Comment.Avatar
-        src={`/images/profile-picture/100x100/${comment.author[0].profilePicture}`}
+        src={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${comment.author[0].profilePicture}`}
       />
       <Comment.Content>
         <Comment.Author

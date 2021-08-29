@@ -36,7 +36,7 @@ class NewUsersList extends Component {
         <List.Item key={user._id}>
           <Image
             avatar
-            src={`/images/profile-picture/100x100/${user.profilePicture}`}
+            src={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${user.profilePicture}`}
           />
           <List.Content>
             <List.Header
