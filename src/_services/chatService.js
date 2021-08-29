@@ -22,7 +22,7 @@ function getChatRooms() {
     }
   };
 
-  return fetch("/api/chat/getChatRooms/", requestOptions)
+  return fetch("process.env.REACT_APP_SERVER_URL/api/chat/getChatRooms/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -41,7 +41,7 @@ function readMessages(params) {
     })
   };
 
-  return fetch("/api/chat/readMessages/", requestOptions)
+  return fetch("process.env.REACT_APP_SERVER_URL/api/chat/readMessages/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -60,7 +60,7 @@ function getMessagesForRoom(room) {
     })
   };
 
-  return fetch("/api/chat/getMessagesForRoom/", requestOptions)
+  return fetch("process.env.REACT_APP_SERVER_URL/api/chat/getMessagesForRoom/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -79,7 +79,7 @@ function sendMessage(params) {
     })
   };
 
-  return fetch("/api/chat/sendMessage/", requestOptions)
+  return fetch("process.env.REACT_APP_SERVER_URL/api/chat/sendMessage/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -95,7 +95,7 @@ function sendImage(data) {
     body: data
   };
 
-  return fetch("/api/chat/sendImage/", requestOptions)
+  return fetch("process.env.REACT_APP_SERVER_URL/api/chat/sendImage/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -114,7 +114,7 @@ function call(data) {
     })
   };
 
-  return fetch("/api/chat/call/", requestOptions)
+  return fetch("process.env.REACT_APP_SERVER_URL/api/chat/call/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -133,7 +133,7 @@ function answer(data) {
     })
   };
 
-  return fetch("/api/chat/answer/", requestOptions)
+  return fetch("process.env.REACT_APP_SERVER_URL/api/chat/answer/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
