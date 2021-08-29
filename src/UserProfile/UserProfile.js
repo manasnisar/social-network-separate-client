@@ -99,6 +99,7 @@ class UserProfile extends Component {
             trigger={
               <div className="gallery-item">
                 <img
+                  crossOrigin = "Anonymous"
                   src={`${process.env.REACT_APP_SERVER_URL}/images/post-images/thumbnail/${post.photo}`}
                   className="gallery-image"
                   alt=""
@@ -161,6 +162,7 @@ class UserProfile extends Component {
                 <div className="profile-image">
                   <img
                     src={`${process.env.REACT_APP_SERVER_URL}/images/profile-picture/100x100/${userProfileData.data.profilePicture}`}
+                    crossOrigin = "Anonymous"
                     alt=""
                   />
                 </div>
