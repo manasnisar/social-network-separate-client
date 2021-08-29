@@ -26,7 +26,7 @@ function fetchPosts(queryParams) {
     body: JSON.stringify({ ...queryParams })
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/post/getPosts/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/post/getPosts/", requestOptions)
     .then(handleResponse)
     .then(response => {
       return response.data;
@@ -43,7 +43,7 @@ function getPostLikes(postId) {
     body: JSON.stringify({ postId })
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/post/getPostLikes/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/post/getPostLikes/", requestOptions)
     .then(handleResponse)
     .then(response => {
       return response;
@@ -60,7 +60,7 @@ function getPostsByHashtag(hashtag, queryParams) {
     body: JSON.stringify({ hashtag, ...queryParams })
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/post/getPostsByHashtag/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/post/getPostsByHashtag/", requestOptions)
     .then(handleResponse)
     .then(response => {
       return response.data;
@@ -77,7 +77,7 @@ function getPostsByLocation(coordinates, queryParams) {
     body: JSON.stringify({ coordinates, ...queryParams })
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/post/getPostsByLocation/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/post/getPostsByLocation/", requestOptions)
     .then(handleResponse)
     .then(response => {
       return response.data;
@@ -94,7 +94,7 @@ function deletePost(postId) {
     body: JSON.stringify({ postId })
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/post/delete/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/post/delete/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -110,7 +110,7 @@ function addPost(postData) {
     body: postData
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/post/addPost/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/post/addPost/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res.post;
@@ -126,7 +126,7 @@ function addProfiePicture(postData) {
     body: postData
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/addProfiePicture/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/addProfiePicture/", requestOptions)
     .then(handleResponse)
     .then(user => {
       return user;
@@ -143,7 +143,7 @@ function likePost(postId, authorId) {
     body: JSON.stringify({ postId, authorId })
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/post/likePost/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/post/likePost/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -160,7 +160,7 @@ function getPost(postId) {
     body: JSON.stringify({ postId })
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/post/getPost/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/post/getPost/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;

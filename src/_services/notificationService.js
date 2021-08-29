@@ -20,7 +20,7 @@ function readNotifications(notificationIds) {
     })
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/notification/readNotifications/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/notification/readNotifications/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res;
@@ -39,7 +39,7 @@ function fetchNotifications(queryOptions) {
     })
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/notification/getNotifications/", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/notification/getNotifications/", requestOptions)
     .then(handleResponse)
     .then(res => {
       return res.data;

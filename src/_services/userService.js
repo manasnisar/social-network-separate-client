@@ -22,7 +22,7 @@ function login(email, password) {
     body: JSON.stringify({ email, password }),
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/login", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/login", requestOptions)
     .then(handleResponse)
     .then((res) => {
       // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -38,7 +38,7 @@ function getNewUsers(params) {
     body: JSON.stringify({ ...params }),
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/getNewUsers", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/getNewUsers", requestOptions)
     .then(handleResponse)
     .then((res) => {
       return res;
@@ -55,7 +55,7 @@ function resetPassword(data) {
     body: JSON.stringify({ ...data }),
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/passwordreset", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/passwordreset", requestOptions)
     .then(handlePasswordResetResponse)
     .then((res) => {
       return res;
@@ -68,7 +68,7 @@ function sendVerificationEmail(email) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email }),
   };
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/sendVerificationEmail/", requestOptions).then(
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/sendVerificationEmail/", requestOptions).then(
     handleResponse
   );
 }
@@ -79,7 +79,7 @@ function sendforgotPasswordEmail(email) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email }),
   };
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/sendforgotPasswordEmail/", requestOptions).then(
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/sendforgotPasswordEmail/", requestOptions).then(
     handleResponse
   );
 }
@@ -94,7 +94,7 @@ function register(user) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(user),
   };
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/signup/", requestOptions).then(handleResponse);
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/signup/", requestOptions).then(handleResponse);
 }
 
 function getUserData(queryParams) {
@@ -106,7 +106,7 @@ function getUserData(queryParams) {
     },
     body: JSON.stringify({ ...queryParams }),
   };
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/getUserData", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/getUserData", requestOptions)
     .then(handleResponse)
     .then((res) => {
       return res;
@@ -122,7 +122,7 @@ function getPosts(queryParams) {
     },
     body: JSON.stringify({ ...queryParams }),
   };
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/getPosts", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/getPosts", requestOptions)
     .then(handleResponse)
     .then((res) => {
       return res;
@@ -140,7 +140,7 @@ function updateUser(user) {
     body: JSON.stringify(user),
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/updateUser", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/updateUser", requestOptions)
     .then(handleResponse)
     .then((user) => {
       localStorage.setItem("user", JSON.stringify({ token: user.token }));
@@ -160,7 +160,7 @@ function followUser(userId) {
     body: JSON.stringify({ userId }),
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/followUser", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/followUser", requestOptions)
     .then(handleResponse)
     .then((user) => {
       // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -180,7 +180,7 @@ function getUserProfileData(username) {
     body: JSON.stringify({ username: username.trim(), profilePage: true }),
   };
 
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/getProfilePageData", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/getProfilePageData", requestOptions)
     .then(handleResponse)
     .then((user) => {
       // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -198,7 +198,7 @@ function getUserProfileFollowers(userId) {
     },
     body: JSON.stringify({ userId }),
   };
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/getUserProfileFollowers", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/getUserProfileFollowers", requestOptions)
     .then(handleResponse)
     .then((res) => {
       return res;
@@ -214,7 +214,7 @@ function getUserProfileFollowings(userId) {
     },
     body: JSON.stringify({ userId }),
   };
-  return fetch(process.env.REACT_APP_SERVER_URL + "/api/api/user/getUserProfileFollowings", requestOptions)
+  return fetch(process.env.REACT_APP_SERVER_URL + "/api/user/getUserProfileFollowings", requestOptions)
     .then(handleResponse)
     .then((res) => {
       return res;
